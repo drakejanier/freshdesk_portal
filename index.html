@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./styles/style.css'>
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <!-- Optional theme -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+            integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+  </head>
+
+  <body>
+    <div class="page">
+
+      <!-- {{ header }} -->
+      <!-- ------- HEADER CALL ------- -->
+      <header class="banner">
+        <div class="banner-wrapper">
+          <div class="banner-title">
+            <a href="/support/home" class="portal-logo"><span class="portal-img"><i></i>
+                <img
+                  src="https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/22000104936/logo/hqBh92OQFYmw47Dz-FC1NPbpyTUZH6vmWg.png"
+                  alt="Logo" onerror="default_image_error(this)" data-type="logo">
+              </span></a>
+            <h1 class="ellipsis heading">Really Social</h1>
+          </div>
+          <nav class="page-tabs">
+
+            <a data-toggle-dom="#header-tabs" href="#" data-animated="true"
+              class="mobile-icon-nav-menu show-in-mobile"></a>
+            <div class="nav-link" id="header-tabs">
+              <a href="/support/home" class="active">Home</a>
+              <a href="/support/solutions" class="">Solutions</a>
+              <a href="/support/discussions" class="">Forums</a>
+              <a href="/support/tickets" class="">Tickets</a>
+            </div>
+
+          </nav>
+          <nav class="banner-nav">
+            <div class="welcome">Welcome <b>Amanda Ilett</b> </div> <b><a href="/">Agent Portal</a></b> |
+            <b><a href="/support/profile/edit">Edit profile</a></b> - <b><a href="/logout">Sign out</a></b>
+          </nav>
+        </div>
+      </header>
+
+
+      <!-- Search and page links for the page -->
+      <!-- {% if portal.current_tab %} -->
+
+      <!-- --------- HELP CENTER CALL --------- -->
+      <section class="help-center">
+        <div class="hc-wrap">
+          <div class="hc-search">
+            <div class="hc-search-c">
+              <h2 class="heading hide-in-mobile">How can we help you today?</h2>
+              <form class="hc-search-form print--remove" autocomplete="off" action="/support/search" id="hc-search-form"
+                data-csrf-ignore="true">
+                <div class="hc-search-input">
+                  <label for="support-search-input" class="hide">Enter your search term
+                    here...</label>
+                  <input placeholder="Enter your search term here..." type="text" name="term"
+                    class="special ui-autocomplete-input" value="" rel="page-search" data-max-matches="10"
+                    id="support-search-input" autocomplete="off">
+                </div>
+                <div class="hc-search-button">
+                  <button class="btn btn-primary" aria-label="Search" type="submit" autocomplete="off">
+                    <i class="mobile-icon-search hide-tablet"></i>
+                    <span class="hide-in-mobile">
+                      Search
+                    </span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="hc-nav ">
+            <nav>
+              <div>
+                <a href="/support/tickets/new" class="mobile-icon-nav-newticket new-ticket ellipsis"
+                  title="New support ticket">
+                  <span> New support ticket </span>
+                </a>
+              </div>
+              <div>
+                <a href="/support/tickets" class="mobile-icon-nav-status check-status ellipsis"
+                  title="Check ticket status">
+                  <span>Check ticket status</span>
+                </a>
+              </div>
+            </nav>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- {% endif %} -->
+
+      <!-- Notification Messages -->
+      <!-- {{ page_message }} -->
+
+      <div class="c-wrapper">
+        <section class="main content rounded-6 min-height-on-desktop fc-portal-solution-home" id="solutions-index-home">
+
+
+
+          <div class="cs-s">
+
+            <div class="cs-g-c">
+
+              <section class="cs-g article-list">
+                <div class="list-lead">
+                  <a href="/support/solutions/folders/22000178243" title="Guides"> Guides <span
+                      class="item-count">4</span></a>
+                </div>
+                <ul>
+                  <li class="article">
+                    <div class="ellipsis">
+                      <a href="/support/solutions/articles/22000274812-introduction-to-really-social">Introduction
+                        to Really Social</a>
+                    </div>
+                  </li>
+                  <li class="article">
+                    <div class="ellipsis">
+                      <a href="/support/solutions/articles/22000274813-get-started">Get
+                        Started</a>
+                    </div>
+                  </li>
+                  <li class="article">
+                    <div class="ellipsis">
+                      <a href="/support/solutions/articles/22000274814-advertising-tips-and-best-practices">Advertising
+                        Tips and Best Practices</a>
+                    </div>
+                  </li>
+                  <li class="article">
+                    <div class="ellipsis">
+                      <a href="/support/solutions/articles/22000274815-running-your-first-campaign">Running
+                        your First Campaign</a>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+
+            </div>
+          </div>
+
+        </section>
+      </div>
+
+      {{ footer }}
+
+    </div>
+  </body>
+
+</html>

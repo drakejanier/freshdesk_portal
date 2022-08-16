@@ -1,0 +1,230 @@
+//----- COLOURS
+$purp : #a173ff;
+$torq  : #97cacc;
+$pink : #fcdbe8;
+$coral : #f7584a;
+$beige : #f0decc;
+$yellow : #ffcb33;
+$gold : #aa9964;
+$burgendy : #a64b69;
+$slate : #454f66;
+
+//----- FONTS
+$font_rsm : 'Space Grotesk', sans-serif;
+$font_size : '14px';
+
+//----- FLEX
+@mixin flexbox($f-align, $f-justify, $f-direction) {
+    box-sizing: border-box;
+    display: flex;
+    align-items: $f-align;
+    flex-direction: $f-direction;
+    justify-content: $f-justify;
+}
+
+@mixin flexbox-unbox($f-align, $f-justify, $f-direction) {
+    display: flex;
+    align-items: $f-align;
+    flex-direction: $f-direction;
+    justify-content: $f-justify;
+}
+
+.hide{
+    display: none;
+}
+body{
+    //background-color: #000;
+    font-family: $font_rsm !important;
+    font-size: $font_rsm;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+h1,h2,h3,p,a{
+    font-family: $font_rsm !important;
+}
+h2{
+    font-size: 3rem !important;
+    line-height: 2rem;
+    font-weight: bold;
+}
+p,a{
+    font-size: 14px ;
+}
+    
+
+.page{
+    @include flexbox(center, center, column);
+    margin: 0;
+    max-width: 100%;
+    padding:0;  
+}
+.banner{
+    @include flexbox(center, center, column);
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+    width:100%;
+}
+.banner-wrapper{
+    @include flexbox(center, space-between, row);
+
+    background-color: $purp;
+    padding: 2rem;
+    width: 100%;
+
+    .banner-title{
+        @include flexbox(center, left, row);
+
+        gap: 1.2rem;
+        width: 30%;
+    }
+
+    .page-tabs {
+        @include flexbox(center, center, row);   
+
+        //background-color: #000;
+        border: none;
+        width: 40%;
+        
+        #header-tabs{
+            display: block;
+        }
+    }
+    .nav-link{
+        @include flexbox-unbox(center, center, row);
+        
+        border: none;
+        gap: 10%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+        
+        
+        a{
+            background-color: transparent;
+            border: none;
+            border-radius: 0;
+            box-sizing: border-box;
+            display: inline-block;
+            color: #000;            
+            font-size: 1rem;           
+            font-weight: 500; 
+            text-decoration: none;
+            transition: 0.3s ease-in;
+            position:relative;
+            padding: 0.3rem 1rem;
+            
+
+            &:before{
+                content: "";
+                position: absolute;
+                background-color: #fff;
+                height: 3px;
+                width: 0;
+                bottom: -10px;
+                transition: 0.3s;
+            }
+            &:hover{
+                background-color: transparent;
+                color:#fff;
+                &:before{
+                    width: calc(100% - 2rem);
+                }
+            }
+            &.active{
+                background-color: transparent;
+            }
+        }
+    }
+    .banner-nav{
+        @include flexbox(center, center, row);
+        
+        flex-wrap:wrap;
+        text-align: center;
+        width: 30%;
+        
+
+        .welcome{
+            flex-grow: 4;
+            width: 100%;
+        }
+        b{
+            flex-grow: 1;            
+        }
+        a{
+            color: #000;
+            font-size: 0.8rem;
+            padding: 0.5rem;
+            transition: 0.3s ease;
+
+            &:hover{
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.help-center{
+    @include flexbox(center, center, column);
+        
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    &::before{
+        display: none;
+    }
+    .hc-wrap{
+        @include flexbox(center, center, column);
+
+        background-color: $purp;
+        width: 100%;
+        padding: 2% 3%;
+    }
+    .hc-search{
+        border: none;
+
+        .hc-search-c {
+            @include flexbox(center, center, column);
+    
+            h2{
+                color: #fff;            
+                margin: 2rem;
+                padding: 0;
+                text-align: center;
+            }
+            .hc-search-form{
+                @include flexbox(center, center, row);
+
+                width: 100%;
+
+                .hc-search-input{
+                    @include flexbox(center, flex-end, row);    
+                    
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+
+                    input{
+                        font-size:1rem;
+                        padding: 0.8rem 0.5rem;
+                        width: 15rem;
+                    }
+                }
+                .hc-search-button{
+                    @include flexbox(center, flex-start, row);   
+
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+}
