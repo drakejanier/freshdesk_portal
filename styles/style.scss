@@ -453,12 +453,12 @@ h4 {
 .main-wrap {
     @include flexbox(center, flex-start, column);
     background-color: #f5f5f5;        
-    min-height: 100vh;
-    padding: 2rem;
+    min-height: 100vh;    
     width: 100%;
 
     .title {
         margin: 2rem;
+        width: 100%;
         // margin-top: 5rem;
         
         h2{
@@ -475,6 +475,7 @@ h4 {
     gap: 2rem;
     flex-flow: row wrap;
     max-width: 1400px;
+    padding: 2rem;
     text-align: center;
     width: 100%;
 }
@@ -484,7 +485,7 @@ h4 {
 
     background-color: #fff;
     flex-wrap: no-wrap;
-    max-width: 25rem;
+    max-width: 20rem;
     min-width: 10rem;
     width: 100%;
 
@@ -530,13 +531,35 @@ h4 {
     }
 }
 
+.topics{
+    // display: none;
+    background-color: $torq;
+    box-sizing: border-box;
+    margin: 0%;
+
+    &-block{
+        // background-color: rgba($color: #fff, $alpha: 0.3);
+        box-sizing: border-box;
+        min-width: 10rem;
+        // padding: 1rem;
+        
+    }
+}
+
 footer {
     display: none;
 }
 
 //MEDIA QUERY
-@media only screen and (min-width : 721px) {
+@media only screen and (min-width : 721px) {   
 
+    //DESKTOP
+    .hide-in-mobile{
+        display: inline-block;
+    }    
+    .show-in-mobile{
+        display: none;
+    }    
     //DESKTOP
     .banner-wrapper{
         background-color: #000;
@@ -569,12 +592,18 @@ footer {
         background-size: auto 200% ;
         background-repeat: no-repeat;
         background-position: -3%  top;
-    }
-    
+    }    
     
 }
 
 @media only screen and (max-width : 721px) {
+    //MOBILE
+    .hide-in-mobile{
+        display: none;
+    }    
+    .show-in-mobile{
+        display: inline-block;
+    }    
     //MOBILE    
     .banner{
         padding: 2rem;
@@ -607,6 +636,12 @@ footer {
     }
     .help-center{
         input:focus{
+            width: 100%;
+        }
+    }
+    //MOBILE
+    .topics{
+        &-block{
             width: 100%;
         }
     }
